@@ -1,0 +1,3 @@
+$(function($){
+  Calendar.render(".calendar");
+});
