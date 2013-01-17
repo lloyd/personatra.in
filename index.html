@@ -3,19 +3,62 @@
 <head>
   <title>What Train is It?</title>
   <style>
+    header .train {
+      float: right;
+      font-size: 4.5em;
+    }
     section {
-      width: 1000px;
+      width: 800px;
       margin: auto;
+    }
+    div.main {
+      position: relative;
+    }
+    section div.calendar {
+      width: 450px;
+      height: 450px;
+    }
+    section div.calendar > div {
+      width: 60px;
+      height: 50px;
+      border: 1px solid black;
+      float: left;
+    }
+    div.main .right_side {
+      width: 300px;
+      float: right;
+      clear: both;
+    }
+
+    .right_side .title {
+      font-size: 2.5em;
+      text-align: center;
     }
   </style>
 </head>
 <body>
 <section>
   <header>
+    <div class="train">
+      2012.01.11
+    </div>
     <div class="logo"><img src="i/personatrain-logo.png"></div>
-    <div class="train"></div>
   </header>
-  <div class="calendar">
+  <div class="main">
+    <div class="key_dates right_side">
+      <div class="title">Key Dates</div>
+    </div>
+    <div class="right_now right_side">
+      <div class="title">Right Now</div>
+    </div>
+    <div class="calendar">
+      <div></div><div></div><div></div> <div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div> <div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div> <div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div> <div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div> <div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div> <div></div><div></div><div></div><div></div>
+    </div>
   </div>
 </section>
 </body>
