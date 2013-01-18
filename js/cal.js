@@ -1,6 +1,7 @@
 var Calendar = {
-  render: function(selector) {
-    $(selector).empty();
-    $(selector).text("hi mom");
+  // render the calendar given the specified train
+  render: function(selector, train) {
+    train = train || '2012.01.11';
+    console.log(moment(train).fromNow());
   }
 };

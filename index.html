@@ -3,33 +3,47 @@
 <head>
   <title>What Train is It?</title>
   <style>
+    body {
+
+    }
     header .train {
       float: right;
+      text-align: right;
+    }
+    header .train .name {
       font-size: 4.5em;
     }
     section {
       width: 800px;
       margin: auto;
     }
-    div.main {
-      position: relative;
+    div.key_dates {
+      margin-top: 4em;
     }
     section div.calendar {
       width: 450px;
       height: 450px;
     }
-    section div.calendar > div {
+    div.calendar > div, div.days > div {
       width: 60px;
       height: 50px;
       border: 1px solid black;
       float: left;
+      margin-top: -1px;
+      margin-left: -1px;
+    }
+    div.days > div {
+      border-top: none;
+      text-align: center;
+      font-weight: bold;
+    line-height: 60px;
     }
     div.main .right_side {
       width: 300px;
       float: right;
       clear: both;
+      font-weight: bold;
     }
-
     .right_side .title {
       font-size: 2.5em;
       text-align: center;
@@ -40,7 +54,9 @@
 <section>
   <header>
     <div class="train">
-      2012.01.11
+      <div class="name"></div>
+      <div>branches - <span class="branches"></span></div>
+      <div>ships - <span class="ships"></span></div>
     </div>
     <div class="logo"><img src="i/personatrain-logo.png"></div>
   </header>
@@ -51,18 +67,22 @@
     <div class="right_now right_side">
       <div class="title">Right Now</div>
     </div>
+    <div class="days">
+      <div>Sun</div><div>Mon</div><div>Tues</div><div>Wed</div><div>Thurs</div><div>Fri</div><div>Sat</div>
+    </div>
     <div class="calendar">
-      <div></div><div></div><div></div> <div></div><div></div><div></div><div></div>
-      <div></div><div></div><div></div> <div></div><div></div><div></div><div></div>
-      <div></div><div></div><div></div> <div></div><div></div><div></div><div></div>
-      <div></div><div></div><div></div> <div></div><div></div><div></div><div></div>
-      <div></div><div></div><div></div> <div></div><div></div><div></div><div></div>
-      <div></div><div></div><div></div> <div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
     </div>
   </div>
 </section>
 </body>
 <script src="js/zepto.min.js"></script>
+<script src="js/moment.min.js"></script>
 <script src="js/cal.js"></script>
 <script src="js/main.js"></script>
 </html>
