@@ -12,11 +12,15 @@
       float: right;
       text-align: right;
     }
-    header .train .name {
-      font-size: 3.5em;
+    header .train > div.name {
+      font-size: 3em;
+    }
+    header .train .left:hover, header .train .right:hover {
+      cursor: pointer;
+      color: #ff3030; // firebrick
     }
     section {
-      width: 800px;
+      width: 820px;
       margin: auto;
     }
     div.key_dates > .title {
@@ -81,7 +85,7 @@
 <section>
   <header>
     <div class="train">
-      <div class="name"></div>
+      <div class="name"><span class="left">&lArr;</span><span class="name"></span><span class="right">&rArr;</span></div>
       <div>branches - <span class="branches"></span></div>
       <div>ships - <span class="ships"></span></div>
     </div>

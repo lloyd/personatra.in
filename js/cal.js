@@ -3,11 +3,12 @@ var Calendar = {
   render: function(selector, train) {
     train = train.replace(/\./g, '/');
     // first update the visual calendar
-    var m = moment(train).subtract('days', 12);
+    var m = moment(train).subtract('days', 19);
     var kids = $(".calendar > div");
+    kids.removeClass('today');
     for (var i = 0; i < kids.length; i++) {
       $(kids[i]).text(m.format("MM/DD"));
-      if (i > 10 && i < 25) $(kids[i]).addClass("train");
+      if (i > 17 && i < 32) $(kids[i]).addClass("train");
       if (m.sod().diff(moment().sod()) === 0) {
         $(kids[i]).addClass("today").text("today");
       }
@@ -22,12 +23,12 @@ var Calendar = {
     }
 
     $("div.date").on('mouseover', function() {
-      var x = $("div.calendar > div")[12 + parseInt($(this).attr('offset'))];
+      var x = $("div.calendar > div")[19 + parseInt($(this).attr('offset'))];
       // which cell
       $(x).addClass("highlighted");
     });
     $("div.date").on('mouseout', function() {
-      var x = $("div.calendar > div")[12 + parseInt($(this).attr('offset'))];
+      var x = $("div.calendar > div")[19 + parseInt($(this).attr('offset'))];
       // which cell
       $(x).removeClass("highlighted");
     });
