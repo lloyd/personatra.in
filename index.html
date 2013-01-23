@@ -19,8 +19,18 @@
       width: 800px;
       margin: auto;
     }
-    div.key_dates {
-      margin-top: 4em;
+    div.key_dates > .title {
+      margin-top: 1em;
+      margin-bottom: .5em;
+    }
+
+    div.key_dates div:hover {
+      cursor: pointer;
+      color: #ff3030; // firebrick
+    }
+    div.key_dates .when {
+      float: left;
+      margin-right: 2em;
     }
     section div.calendar {
       width: 450px;
@@ -28,16 +38,34 @@
     }
     div.calendar > div, div.days > div {
       width: 60px;
-      height: 50px;
+      height: 40px;
       border: 1px solid black;
       float: left;
       margin-top: -1px;
       margin-left: -1px;
     }
+    div.calendar > div {
+      font-size: .8em;
+      text-align: center;
+      padding-top: 1em;
+    }
+    div.calendar > div.train {
+      background-color: #b0c4de;
+    }
+    div.calendar > div.today {
+      background-color: #f4a460;
+    }
+    div.calendar > div.highlighted {
+      background-color: #ffb6c1;
+    }
     div.days > div {
       border-top: none;
       text-align: center;
       line-height: 60px;
+      font-weight: bold;
+    }
+    div.main {
+      margin-top: 1em;
     }
     div.main .right_side {
       width: 300px;
@@ -63,9 +91,69 @@
   <div class="main">
     <div class="key_dates right_side">
       <div class="title">Key Dates</div>
-    </div>
-    <div class="right_now right_side">
-      <div class="title">Right Now</div>
+      <div class="date" tags="" offset="-4">
+        <div class="when">
+        </div>
+        <div class="name">
+          Feature Last Call
+        </div>
+        <div class="description">
+        </div>
+      </div>
+      <div class="date" tags="" offset="-4">
+        <div class="when">
+        </div>
+        <div class="name">
+          Developer Driven Testing
+        </div>
+        <div class="description">
+        </div>
+      </div>
+      <div class="date" tags="" offset="0">
+        <div class="when">
+        </div>
+        <div class="name">
+          Train Branched
+        </div>
+        <div class="description">
+        </div>
+      </div>
+      <div class="date" tags="" offset="0">
+        <div class="when">
+        </div>
+        <div class="name">
+          String Freeze
+        </div>
+        <div class="description">
+        </div>
+      </div>
+      <div class="date" tags="" offset="3">
+        <div class="when">
+        </div>
+        <div class="name">
+          Push to Staging
+        </div>
+        <div class="description">
+        </div>
+      </div>
+      <div class="date" tags="" offset="10">
+        <div class="when">
+        </div>
+        <div class="name">
+          Translation Last Call
+        </div>
+        <div class="description">
+        </div>
+      </div>
+      <div class="date" tags="" offset="12">
+        <div class="when">
+        </div>
+        <div class="name">
+          Production Push
+        </div>
+        <div class="description">
+        </div>
+      </div>
     </div>
     <div class="days">
       <div>Sun</div><div>Mon</div><div>Tues</div><div>Wed</div><div>Thurs</div><div>Fri</div><div>Sat</div>
