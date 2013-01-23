@@ -1,14 +1,16 @@
 var Calendar = {
   // render the calendar given the specified train
   render: function(selector, train) {
-
+    train = train.replace(/\./g, '/');
     // first update the visual calendar
     var m = moment(train).subtract('days', 12);
     var kids = $(".calendar > div");
     for (var i = 0; i < kids.length; i++) {
       $(kids[i]).text(m.format("MM/DD"));
       if (i > 10 && i < 25) $(kids[i]).addClass("train");
-      if (m.sod().diff(moment().sod()) === 0) $(kids[i]).addClass("today");;
+      if (m.sod().diff(moment().sod()) === 0) {
+        $(kids[i]).addClass("today").text("today");
+      }
       m.add('days', 1);
     }
 
