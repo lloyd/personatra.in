@@ -23,17 +23,19 @@
       width: 820px;
       margin: auto;
     }
-    div.key_dates > .title {
-      margin-top: 1em;
-      margin-bottom: .5em;
+    div.right_side div.title {
+      margin-top: .2em;
+      margin-bottom: .2em;
     }
     div.key_dates div.date:hover {
       cursor: pointer;
       color: #ff3030; // firebrick
     }
-    div.key_dates .when {
+    div.right_side .meta {
       float: left;
-      margin-right: 2em;
+      margin: -1px 1.2em -1px -1px;
+      width: 3em;
+      border: 1px solid white;
     }
     section div.calendar {
       width: 450px;
@@ -79,6 +81,18 @@
       font-size: 2.5em;
       text-align: center;
     }
+    .ddt {
+      background-color: #b0c4de;
+    }
+    .dev {
+      background-color: #7ccd7c;
+    }
+    .qa {
+      background-color: #ee82ee;
+    }
+    .key_dates .description {
+      display: none;
+    }
   </style>
 </head>
 <body>
@@ -92,69 +106,85 @@
     <div class="logo"><img src="i/personatrain-logo.png"></div>
   </header>
   <div class="main">
-    <div class="key_dates right_side">
-      <div class="title">Key Dates</div>
-      <div class="date" tags="" offset="-4">
-        <div class="when">
+    <div class="right_side">
+      <div class="key_dates">
+        <div class="title">Key Dates</div>
+        <div class="date" tags="" offset="-4">
+          <div class="meta">
+          </div>
+          <div class="name">
+            Feature Last Call
+          </div>
+          <div class="description">
+            On the day of "feature last call", all new features for the train have been merged.  All remaining work on the
+            train is stabilization or merging of high priority fixes with QA approval.
+          </div>
         </div>
-        <div class="name">
-          Feature Last Call
+        <div class="date" tags="" offset="0">
+          <div class="meta">
+          </div>
+          <div class="name">
+            Train Branched
+          </div>
+          <div class="description">
+          </div>
         </div>
-        <div class="description">
+        <div class="date" tags="" offset="0">
+          <div class="meta">
+          </div>
+          <div class="name">
+            String Freeze
+          </div>
+          <div class="description">
+          </div>
+        </div>
+        <div class="date" tags="" offset="3">
+          <div class="meta">
+          </div>
+          <div class="name">
+            Push to Staging
+          </div>
+          <div class="description">
+          </div>
+        </div>
+        <div class="date" tags="" offset="10">
+          <div class="meta">
+          </div>
+          <div class="name">
+            Translation Last Call
+          </div>
+          <div class="description">
+          </div>
+        </div>
+        <div class="date" tags="" offset="12">
+          <div class="meta">
+          </div>
+          <div class="name">
+            Push to Production
+          </div>
+          <div class="description">
+          </div>
         </div>
       </div>
-      <div class="date" tags="" offset="-4">
-        <div class="when">
+      <div class="phases">
+        <div class="title">Phases</div>
+        <div class="phase">
+          <div class="dev meta">&nbsp;</div>
+          <div class="name">
+            Feature Development
+          </div>
         </div>
-        <div class="name">
-          Developer Driven Testing
+        <div class="phase">
+          <div class="ddt meta">&nbsp;</div>
+          <div class="name">
+            Developer Driven Testing
+          </div>
         </div>
-        <div class="description">
-        </div>
-      </div>
-      <div class="date" tags="" offset="0">
-        <div class="when">
-        </div>
-        <div class="name">
-          Train Branched
-        </div>
-        <div class="description">
-        </div>
-      </div>
-      <div class="date" tags="" offset="0">
-        <div class="when">
-        </div>
-        <div class="name">
-          String Freeze
-        </div>
-        <div class="description">
-        </div>
-      </div>
-      <div class="date" tags="" offset="3">
-        <div class="when">
-        </div>
-        <div class="name">
-          Push to Staging
-        </div>
-        <div class="description">
-        </div>
-      </div>
-      <div class="date" tags="" offset="10">
-        <div class="when">
-        </div>
-        <div class="name">
-          Translation Last Call
-        </div>
-        <div class="description">
-        </div>
-      </div>
-      <div class="date" tags="" offset="12">
-        <div class="when">
-        </div>
-        <div class="name">
-          Production Push
-        </div>
-        <div class="description">
+        <div class="phase">
+          <div class="qa meta">&nbsp;</div>
+          <div class="name">
+            Formal QA
+          </div>
         </div>
       </div>
     </div>
@@ -163,10 +193,10 @@
     </div>
     <div class="calendar">
       <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-      <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-      <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-      <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-      <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+      <div></div><div class="dev"></div><div class="dev"></div><div class="dev"></div><div class="dev"></div><div class="dev"></div><div></div>
+      <div></div><div class="ddt"></div><div class="ddt"></div><div class="ddt"></div><div class="ddt"></div><div class="ddt"></div><div></div>
+      <div></div><div class="qa" ></div><div class="qa" ></div><div class="qa" ></div><div class="qa" ></div><div class="qa" ></div><div></div>
+      <div></div><div class="qa" ></div><div class="qa" ></div><div></div><div></div><div></div><div></div>
       <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
     </div>
   </div>

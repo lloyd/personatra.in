@@ -8,7 +8,6 @@ var Calendar = {
     kids.removeClass('today');
     for (var i = 0; i < kids.length; i++) {
       $(kids[i]).text(m.format("MM/DD"));
-      if (i > 17 && i < 32) $(kids[i]).addClass("train");
       if (m.sod().diff(moment().sod()) === 0) {
         $(kids[i]).addClass("today").text("today");
       }
@@ -19,7 +18,7 @@ var Calendar = {
     var keyDates = $("div.date");
     for (var i = 0; i < keyDates.length; i++) {
       var x = parseInt($(keyDates[i]).attr("offset"));
-      $(keyDates[i]).find(".when").text(moment(train).add('days', x).format("MM/DD"));
+      $(keyDates[i]).find(".meta").text(moment(train).add('days', x).format("MM/DD"));
     }
 
     $("div.date").on('mouseover', function() {
