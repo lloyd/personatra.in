@@ -1,5 +1,5 @@
 function whatTrain(fromWhen) {
-  fromWhen = moment(fromWhen);
+  fromWhen = moment(typeof fromWhen === 'string' ? fromWhen.replace(/\./g, '/') : fromWhen);
   if (!fromWhen || !fromWhen.isValid()) fromWhen = moment(); // now
 
   var ref = "2013/01/04";
