@@ -16,7 +16,7 @@ function whatTrain(fromWhen) {
 $(function($){
   // determine what train we're talking about
   function setTrain(train) {
-    var m = moment(train.replace(/\./g, '/'));
+    var m = moment(train.replace(/\./g, '-') + timezone);
     $(".train .name .name").text(train);
     $(".train .branches").text(m.eod().fromNow());
     $(".train .ships").text(m.add("days", 12).fromNow());
