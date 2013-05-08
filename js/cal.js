@@ -3,7 +3,7 @@ var Calendar = {
   render: function(selector, train) {
     train = train.replace(/\./g, '/');
     // first update the visual calendar
-    var m = moment(train).subtract('days', 19);
+    var m = moment(train).subtract('days', 17);
     var kids = $(".calendar > div");
     kids.removeClass('today');
     for (var i = 0; i < kids.length; i++) {
@@ -22,12 +22,12 @@ var Calendar = {
     }
 
     $("div.date").on('mouseover', function() {
-      var x = $("div.calendar > div")[19 + parseInt($(this).attr('offset'))];
+      var x = $("div.calendar > div")[17 + parseInt($(this).attr('offset'))];
       // which cell
       $(x).addClass("highlighted");
     });
     $("div.date").on('mouseout', function() {
-      var x = $("div.calendar > div")[19 + parseInt($(this).attr('offset'))];
+      var x = $("div.calendar > div")[17 + parseInt($(this).attr('offset'))];
       // which cell
       $(x).removeClass("highlighted");
     });

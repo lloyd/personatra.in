@@ -2,7 +2,7 @@ function whatTrain(fromWhen) {
   fromWhen = moment(typeof fromWhen === 'string' ? fromWhen.replace(/\./g, '/') : fromWhen);
   if (!fromWhen || !fromWhen.isValid()) fromWhen = moment(); // now
 
-  var ref = "2013/01/04";
+  var ref = "2013/01/02";
   // calculate the "current" train from a reference train
 
   var days = moment(ref)
@@ -19,7 +19,7 @@ $(function($){
     var m = moment(train.replace(/\./g, '/'));
     $(".train .name .name").text(train);
     $(".train .branches").text(m.eod().fromNow());
-    $(".train .ships").text(m.add("days", 12).fromNow());
+    $(".train .ships").text(m.add("days", 14).fromNow());
     Calendar.render(".calendar", train);
   }
 
